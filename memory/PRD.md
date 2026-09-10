@@ -30,12 +30,17 @@ Build a premium, editorial-quality website for BRANDROOT SALON & SPA LTD., a rea
 - Testimonials: added real verified review ("Nice ambience and service." — Sunny Pingale, Justdial Jan 2024) + aggregated guest-praise insights from 361 Justdial ratings; slot reserved for more Google reviews. NOTE: Google review texts are not publicly scrapeable (limited Maps view); only Justdial content was verifiable. One negative review (Pritam, membership complaint) exists — intentionally not featured
 - New images curl-verified (HTTP 200) and screenshot-verified in situ
 
+## Update 2 (2026-09-10) — Real client transformation photos
+- Owner-supplied real client before/after photos hosted locally at /public/images/ (hair-before/after, skin-before/after; optimized 1400px JPEG ~150KB each)
+- Transformations section now shows REAL client results (frizzy→glossy blowout; acne/pores→clear radiant skin), 16:10 object-cover cards, disclosure updated to "REAL CLIENT RESULTS — PHOTOGRAPHED IN-STUDIO AND PUBLISHED WITH CLIENT CONSENT"; component chips removed since labels are baked into photos
+- Verified desktop + mobile screenshots; team arches and gallery confirmed fully populated
+
 ## Backlog
-- P0: Replace representative imagery with real salon photography (team names/portraits, client before/after with consent); add 1–2 more named Google reviews manually from the Maps listing
+- P0: Replace representative team portraits with real stylist photos/names; add 1–2 more named Google reviews manually from the Maps listing
 - P1: Real package pricing/inclusions; notify salon of enquiries (Resend email or WhatsApp API)
 - P2: Dedicated /services detail pages; real Instagram feed embed; blog/SEO content
 
 ## Next Tasks
-1. Collect real photos (team, interior, transformations) from owner and swap representative stock imagery
+1. Collect real stylist portraits/names and any additional client transformations from owner
 2. Copy 2 more named Google reviews manually from the Maps listing into the testimonial section
 3. Confirm package details and publish pricing

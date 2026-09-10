@@ -160,19 +160,15 @@ export const INSTA_TILES = [
 export const TRANSFORMATIONS = [
   {
     service: "Hair Transformation",
-    desc: "Dry, uneven texture to a glossy, precision-finished style.",
-    before:
-      "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=85&w=1200&auto=format&fit=crop",
-    after:
-      "https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?q=85&w=1200&auto=format&fit=crop",
+    desc: "Dry, frizzy and uneven — to a sleek, glossy precision blowout.",
+    before: "/images/hair-before.jpg",
+    after: "/images/hair-after.jpg",
   },
   {
     service: "HydraFacial Skin Ritual",
-    desc: "Congested, tired skin to a hydrated, lit-from-within glow.",
-    before:
-      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=85&w=1200&auto=format&fit=crop",
-    after:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=85&w=1200&auto=format&fit=crop",
+    desc: "Acne marks and enlarged pores — to a clear, hydrated, radiant finish.",
+    before: "/images/skin-before.jpg",
+    after: "/images/skin-after.jpg",
   },
 ];
 

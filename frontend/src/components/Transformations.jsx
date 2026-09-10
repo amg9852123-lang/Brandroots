@@ -13,8 +13,8 @@ export const Transformations = () => (
       </h2>
       <Reveal delay={0.2}>
         <p className="font-sans text-xs tracking-[0.15em] text-charcoal/50 max-w-xs md:text-right leading-relaxed">
-          REPRESENTATIVE EDITORIAL IMAGERY — REAL CLIENT RESULTS ARE PUBLISHED
-          ONLY WITH CLIENT CONSENT.
+          REAL CLIENT RESULTS — PHOTOGRAPHED IN-STUDIO AND PUBLISHED WITH
+          CLIENT CONSENT.
         </p>
       </Reveal>
     </div>
@@ -27,16 +27,13 @@ export const Transformations = () => (
               ["BEFORE", it.before],
               ["AFTER", it.after],
             ].map(([label, src]) => (
-              <figure key={label} className="group relative overflow-hidden aspect-[3/4]">
+              <figure key={label} className="group relative overflow-hidden aspect-[16/10]">
                 <img
                   src={src}
                   alt={`${it.service} — ${label.toLowerCase()}`}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
                 />
-                <figcaption className="absolute top-3 left-3 bg-charcoal/70 backdrop-blur-sm px-3 py-1.5 font-sans text-[9px] tracking-[0.3em] text-ivory">
-                  {label}
-                </figcaption>
               </figure>
             ))}
           </div>
