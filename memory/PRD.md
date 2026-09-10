@@ -24,12 +24,18 @@ Build a premium, editorial-quality website for BRANDROOT SALON & SPA LTD., a rea
 ## Verified
 - curl: POST/GET /api/enquiries ✓; hero/services/gallery/contact screenshots ✓; booking submit → success + wa.me link ✓; mobile hero/menu/contact ✓; all 18 stock images HTTP 200 ✓
 
+## Update (2026-09-10) — Imagery & verified reviews
+- Transformations: placeholder frames replaced with editorial before/after photo pairs (frizzy→glossy hair; facial-in-progress→glowing skin), BEFORE/AFTER tags, "representative imagery" disclosure
+- Team: arched frames now hold professional portrait photography (object-cover in arch masks); names still marked TO BE CONFIRMED
+- Testimonials: added real verified review ("Nice ambience and service." — Sunny Pingale, Justdial Jan 2024) + aggregated guest-praise insights from 361 Justdial ratings; slot reserved for more Google reviews. NOTE: Google review texts are not publicly scrapeable (limited Maps view); only Justdial content was verifiable. One negative review (Pritam, membership complaint) exists — intentionally not featured
+- New images curl-verified (HTTP 200) and screenshot-verified in situ
+
 ## Backlog
-- P0: Replace placeholder team portraits/names, before/after images, and testimonial quote with verified real content
+- P0: Replace representative imagery with real salon photography (team names/portraits, client before/after with consent); add 1–2 more named Google reviews manually from the Maps listing
 - P1: Real package pricing/inclusions; notify salon of enquiries (Resend email or WhatsApp API)
 - P2: Dedicated /services detail pages; real Instagram feed embed; blog/SEO content
 
 ## Next Tasks
-1. Collect real photos (team, interior, transformations) from owner and swap placeholders
-2. Add verified Google reviews to testimonial section
+1. Collect real photos (team, interior, transformations) from owner and swap representative stock imagery
+2. Copy 2 more named Google reviews manually from the Maps listing into the testimonial section
 3. Confirm package details and publish pricing

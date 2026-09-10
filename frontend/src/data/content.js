@@ -156,3 +156,40 @@ export const INSTA_TILES = [
   { img: IMG.spa2, alt: "Spa and wellness therapy" },
   { img: IMG.makeup, alt: "Makeup artistry" },
 ];
+
+export const TRANSFORMATIONS = [
+  {
+    service: "Hair Transformation",
+    desc: "Dry, uneven texture to a glossy, precision-finished style.",
+    before:
+      "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=85&w=1200&auto=format&fit=crop",
+    after:
+      "https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?q=85&w=1200&auto=format&fit=crop",
+  },
+  {
+    service: "HydraFacial Skin Ritual",
+    desc: "Congested, tired skin to a hydrated, lit-from-within glow.",
+    before:
+      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=85&w=1200&auto=format&fit=crop",
+    after:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=85&w=1200&auto=format&fit=crop",
+  },
+];
+
+export const ARTISTS = [
+  {
+    role: "HAIR",
+    note: "Senior Stylist",
+    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=85&w=1200&auto=format&fit=crop",
+  },
+  {
+    role: "SKIN & SPA",
+    note: "Therapist",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=85&w=1200&auto=format&fit=crop",
+  },
+  {
+    role: "NAILS & BEAUTY",
+    note: "Artist",
+    img: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=85&w=1200&auto=format&fit=crop",
+  },
+];

@@ -1,18 +1,5 @@
+import { TRANSFORMATIONS } from "../data/content";
 import { Chapter, Reveal, MaskedLine } from "./Reveal";
-
-const ITEMS = [
-  { service: "Hair Transformation", desc: "Cut, colour and finish — documented with client consent." },
-  { service: "Skin Treatment", desc: "Facial and skin ritual results, photographed in-studio." },
-];
-
-const Frame = ({ label }) => (
-  <div className="aspect-[3/4] border border-dashed border-charcoal/30 bg-beige/20 flex flex-col items-center justify-center gap-2 p-4 text-center">
-    <span className="font-sans text-[10px] tracking-[0.3em] text-charcoal/50">{label}</span>
-    <span className="font-sans text-[9px] tracking-[0.2em] text-charcoal/35">
-      IMAGE TO BE ADDED
-    </span>
-  </div>
-);
 
 export const Transformations = () => (
   <section className="bg-ivory px-5 md:px-10 pb-24 md:pb-36">
@@ -26,24 +13,38 @@ export const Transformations = () => (
       </h2>
       <Reveal delay={0.2}>
         <p className="font-sans text-xs tracking-[0.15em] text-charcoal/50 max-w-xs md:text-right leading-relaxed">
-          REAL CLIENT TRANSFORMATIONS WILL BE SHOWCASED HERE — PUBLISHED ONLY
-          WITH CLIENT CONSENT.
+          REPRESENTATIVE EDITORIAL IMAGERY — REAL CLIENT RESULTS ARE PUBLISHED
+          ONLY WITH CLIENT CONSENT.
         </p>
       </Reveal>
     </div>
 
     <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-14">
-      {ITEMS.map((it, i) => (
+      {TRANSFORMATIONS.map((it, i) => (
         <Reveal key={it.service} delay={i * 0.1}>
           <div className="grid grid-cols-2 gap-3" data-testid={`transformation-${i}`}>
-            <Frame label="BEFORE" />
-            <Frame label="AFTER" />
+            {[
+              ["BEFORE", it.before],
+              ["AFTER", it.after],
+            ].map(([label, src]) => (
+              <figure key={label} className="group relative overflow-hidden aspect-[3/4]">
+                <img
+                  src={src}
+                  alt={`${it.service} — ${label.toLowerCase()}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+                />
+                <figcaption className="absolute top-3 left-3 bg-charcoal/70 backdrop-blur-sm px-3 py-1.5 font-sans text-[9px] tracking-[0.3em] text-ivory">
+                  {label}
+                </figcaption>
+              </figure>
+            ))}
           </div>
-          <div className="mt-4 flex items-baseline justify-between border-t border-charcoal/15 pt-4">
+          <div className="mt-4 border-t border-charcoal/15 pt-4 flex items-baseline justify-between gap-4">
             <h3 className="font-serif text-xl md:text-2xl text-charcoal tracking-tight">
               {it.service}
             </h3>
-            <span className="font-sans text-[10px] tracking-[0.25em] text-charcoal/50">
+            <span className="font-sans text-[10px] tracking-[0.2em] text-charcoal/50 text-right">
               {it.desc}
             </span>
           </div>
