@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 45 25% 95%;
+        --foreground: 0 0% 6.7%;
+        --card: 45 25% 95%;
+        --card-foreground: 0 0% 6.7%;
+        --popover: 45 25% 95%;
+        --popover-foreground: 0 0% 6.7%;
+        --primary: 0 0% 6.7%;
+        --primary-foreground: 45 25% 95%;
+        --secondary: 36 16% 81%;
+        --secondary-foreground: 0 0% 6.7%;
+        --muted: 36 12% 88%;
+        --muted-foreground: 0 0% 38%;
+        --accent: 36 16% 81%;
+        --accent-foreground: 0 0% 6.7%;
+        --destructive: 0 60% 45%;
+        --destructive-foreground: 45 25% 95%;
+        --border: 30 8% 82%;
+        --input: 30 8% 82%;
+        --ring: 0 0% 6.7%;
+        --radius: 0.125rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-ivory text-charcoal font-sans antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    ::selection {
+        background: #111111;
+        color: #f7f5f0;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f7f5f0;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #c4bcb3;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #111111;
+    }
+    input[type="date"] {
+        color-scheme: light;
+    }
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Film grain overlay */
+.grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+        border-left-color: inherit;
+    }
+}

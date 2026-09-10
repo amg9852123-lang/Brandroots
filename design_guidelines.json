@@ -1,0 +1,175 @@
+{
+  "theme_strategy": {
+    "direction": "Quiet Luxury & Fashion Editorial",
+    "vibe": "Cinematic, sophisticated, minimal, confident, timeless, high-end, warm, refined",
+    "banned_elements": ["Bright purple", "Neon", "Excessive gold/gradients", "Glassmorphism", "Glow", "Blobs", "Heavy shadows", "Emojis", "Rounded SaaS cards"]
+  },
+  "typography": {
+    "primary": {
+      "family": "Cormorant Garamond, Playfair Display, serif",
+      "usage": "Large editorial headlines, massive numbers, statement text",
+      "styling": "High contrast, extremely tight tracking (tracking-tighter) for massive sizes or very loose (tracking-widest) for all-caps subheadings"
+    },
+    "secondary": {
+      "family": "Manrope, Outfit, sans-serif",
+      "usage": "Supporting text, body copy, navigation, buttons, small labels",
+      "styling": "Clean, geometric, highly legible, uppercase for micro-labels"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-7xl lg:text-8xl tracking-tighter leading-[0.9]",
+      "h2": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1]",
+      "h3": "text-2xl sm:text-3xl leading-snug",
+      "body": "text-base sm:text-lg leading-relaxed text-opacity-80",
+      "overline": "text-xs tracking-[0.2em] uppercase font-sans font-medium"
+    }
+  },
+  "colors": {
+    "background_light": "#F7F5F0",
+    "background_dark": "#111111",
+    "text_dark": "#111111",
+    "text_light": "#F7F5F0",
+    "accent_beige": "#D9D0C5",
+    "accent_stone": "#C4BCB3",
+    "border_light": "rgba(17, 17, 17, 0.15)",
+    "border_dark": "rgba(247, 245, 240, 0.15)",
+    "theme_logic": "Most of the site is Light Theme (Warm Ivory) with specific deep-contrast Dark Theme sections (Charcoal) for cinematic impact."
+  },
+  "visual_enhancers": {
+    "borders": "1px solid, sharp edges (rounded-none). Minimal use of radius, only if strictly necessary, max rounded-sm.",
+    "shadows": "No heavy drop shadows. Use optical separation via background color shifts, subtle borders, or very diffuse ambient shadow (shadow-2xl with 5% opacity).",
+    "imagery": "Treated deliberately. Use spotlight effects or clipped sharp rectangular/arched frames. Full-bleed where appropriate.",
+    "textures": "Subtle digital grain overlay (pointer-events-none, mix-blend-overlay, opacity-5) to kill digital flatness."
+  },
+  "layouts": {
+    "grid": "Bento Grid protocol Mode A (Tetris Grid) for visual sections. Asymmetry is mandatory. 12-column foundation.",
+    "spacing": "Generous. p-8, p-12, py-24, py-32. Elements must have breathing room.",
+    "alignment": "Optical alignment. Avoid generic center-everything. Lean into left-aligned tension and deliberate offset columns."
+  },
+  "motion": {
+    "scroll": "lenis smooth scrolling is MANDATORY. Standard browser scroll feels cheap.",
+    "reveals": "framer-motion for on-scroll reveals. Specifically, masked line-by-line kinetic reveals for typography.",
+    "interactions": "Subtle hover states on images (scale 1.05 with overflow-hidden), slow editorial marquee, subtle parallax (speed variations on scroll).",
+    "accessibility": "Always check prefers-reduced-motion for heavy animations."
+  },
+  "sections_guidelines": [
+    {
+      "id": "hero",
+      "concept": "Cinematic full-screen hero. Masked line-by-line on-load reveal.",
+      "content": "BRANDROOT / THE ART OF BEAUTIFUL HAIR.",
+      "details": "Minimal text. CTAs: BOOK AN APPOINTMENT + EXPLORE SERVICES. Subtle parallax/3D hero moment. Scroll indicator."
+    },
+    {
+      "id": "statement",
+      "concept": "Fashion magazine spread.",
+      "content": "Beauty is not a service. It is an experience.",
+      "details": "Massive serif text. High negative space. Numbered manifesto chapters style."
+    },
+    {
+      "id": "services_directory",
+      "concept": "Editorial service directory (NOT generic rounded cards).",
+      "content": "HAIR, SKIN & FACIALS, SPA & WELLNESS, NAIL STUDIO, MAKEUP & BEAUTY, WAXING & THREADING, LASER/BEAUTY TREATMENTS, TATTOO.",
+      "details": "Horizontal accordion or list with border-b. Hover reveals image. EXPLORE SERVICES arrow."
+    },
+    {
+      "id": "featured_services",
+      "concept": "Featured service experience editorial section.",
+      "content": "Blow Dry & Styling, HydraFacial, Deep Tissue Massage, Nail Art, etc.",
+      "details": "Real services. Asymmetrical grid. Pricing marked as 'PRICE ON CONSULTATION'."
+    },
+    {
+      "id": "split_screen",
+      "concept": "MORE THAN A SALON. split-screen.",
+      "details": "Sticky left text column, right scrolling imagery column."
+    },
+    {
+      "id": "asymmetric_gallery",
+      "concept": "Immersive asymmetric editorial gallery.",
+      "details": "Varied sizes, hover movement. NO boring 3-col grid."
+    },
+    {
+      "id": "transformations",
+      "concept": "Before/After section.",
+      "details": "Clearly marked image placeholders. Premium slider or hover state."
+    },
+    {
+      "id": "team",
+      "concept": "Editorial portrait layouts.",
+      "details": "Placeholders. No invented staff names. Minimalist captions."
+    },
+    {
+      "id": "packages",
+      "concept": "Luxury membership presentation.",
+      "content": "Silver, Gold, Platinum.",
+      "details": "VIEW PACKAGE DETAILS. NOT a SaaS pricing table. Stacked layout or elegant editorial cards."
+    },
+    {
+      "id": "testimonials",
+      "concept": "Refined testimonial section.",
+      "content": "4.8★ Google rating mention, ~365 reviews.",
+      "details": "Large quote typography, NO fake reviews. Clean layout."
+    },
+    {
+      "id": "instagram",
+      "concept": "Editorial marquee or grid.",
+      "details": "Links to instagram.com/brandrootsalonandspa."
+    },
+    {
+      "id": "location",
+      "concept": "Mobile-first utility section.",
+      "details": "Maps, Call, WhatsApp, Directions buttons."
+    },
+    {
+      "id": "booking_cta",
+      "concept": "Final cinematic CTA.",
+      "content": "YOUR NEXT TRANSFORMATION STARTS HERE.",
+      "details": "Appointment enquiry form (name, phone, service, date, time, message) saved to DB + WhatsApp deep-link. Minimal luxury footer."
+    }
+  ],
+  "components": {
+    "navigation": "Minimal. Left: BRANDROOT, Center: HOME/SERVICES/EXPERIENCE/GALLERY/ABOUT/CONTACT, Right: BOOK APPOINTMENT. Sticky on scroll, becomes more readable. Refined full-screen mobile menu drawer.",
+    "buttons": "Sharp edges, 1px border, transparent background transitioning to solid on hover, uppercase tracking-widest.",
+    "marquee": "One slow editorial marquee using react-fast-marquee."
+  },
+  "image_urls": {
+    "interior": [
+      "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBoYWlyJTIwc2Fsb24lMjBpbnRlcmlvciUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODkwNDQ4NTF8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBoYWlyJTIwc2Fsb24lMjBpbnRlcmlvciUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODkwNDQ4NTF8MA&ixlib=rb-4.1.0&q=85"
+    ],
+    "portraits": [
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxlZGl0b3JpYWwlMjBmYXNoaW9uJTIwcG9ydHJhaXQlMjBiZWF1dGlmdWwlMjBoYWlyfGVufDB8fHx8MTc4OTA0NDg1MXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1495462911434-be47104d70fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmYXNoaW9uJTIwcG9ydHJhaXQlMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8MTc4OTA0NDg1N3ww&ixlib=rb-4.1.0&q=85"
+    ],
+    "services": [
+      "https://images.unsplash.com/photo-1643684391140-c5056cfd3436?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxzcGElMjBmYWNpYWwlMjBza2luY2FyZSUyMGx1eHVyeSUyMG1vZGVsfGVufDB8fHx8MTc4OTA0NDg1MXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwzfHxzcGElMjBmYWNpYWwlMjBza2luY2FyZSUyMGx1eHVyeSUyMG1vZGVsfGVufDB8fHx8MTc4OTA0NDg1MXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1604654894610-df63bc536371?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxuYWlsJTIwYXJ0JTIwbWFuaWN1cmUlMjBsdXh1cnklMjBhZXN0aGV0aWN8ZW58MHx8fHwxNzg5MDQ0ODUxfDA&ixlib=rb-4.1.0&q=85"
+    ],
+    "abstract": [
+      "https://images.pexels.com/photos/8426345/pexels-photo-8426345.jpeg"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "You are building a premium luxury salon website, NO generic SaaS UI.",
+    "Implement 'lenis' for smooth scrolling. This is absolutely critical for the luxury feel.",
+    "Use framer-motion heavily for masked line-by-line typography reveals on scroll.",
+    "Use lucide-react or @phosphor-icons/react for sparse, elegant icons.",
+    "Do NOT use Shadcn Card components with their default borders and border-radius. Build custom pure HTML/Tailwind divs for maximum control.",
+    "Strictly follow the color palette. Pure white and pure black are replaced with Warm Ivory (#F7F5F0) and Deep Charcoal (#111111).",
+    "Forms (Appointment): Use Shadcn Form/Input primitives but restyle them heavily to be minimal (e.g., just a bottom border, no background). Integrate with FastAPI backend.",
+    "Ensure the hero header is NOT transparent without a backdrop blur. Sticky nav should adapt color based on background or use a subtle scrim.",
+    "Add 'data-testid' to all interactive elements."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Do not converge toward generic outputs ('AI slop'). Make creative, distinctive frontends.",
+    "Do not make generic centered layouts or uniform styling. Use asymmetry and grid span variations.",
+    "Never use AI assistant Emoji characters (🤖🧠💡).",
+    "Every interaction needs micro-animations - hover states, transitions. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "DO NOT use complete transparent background in header/overlays. Use glassmorphism or solid backgrounds.",
+    "Do not add universal transitions (e.g., transition: all). Target specific properties.",
+    "Do not center align the app container (.App { text-align: center; }).",
+    "Missing images/logos must NOT be replaced with placeholder text. Use provided URLs.",
+    "Use sonner for toasts.",
+    "All interactive elements must include a data-testid attribute in kebab-case format."
+  ]
+}
