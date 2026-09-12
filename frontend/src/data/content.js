@@ -1,25 +1,23 @@
 export const BRAND = {
-  name: "BRANDROOT",
-  full: "BRANDROOT SALON & SPA LTD.",
-  tagline: "Hair · Beauty · Wellness",
-  city: "Nashik, Maharashtra",
-  phone: "+91 75075 15957",
-  phoneHref: "tel:+917507515957",
-  whatsapp:
-    "https://wa.me/917507515957?text=" +
-    encodeURIComponent("Hello BRANDROOT, I'd like to book an appointment."),
-  instagram: "https://www.instagram.com/brandrootsalonandspa",
-  instagramHandle: "@brandrootsalonandspa",
-  maps: "https://maps.app.goo.gl/m3wb4n5AZk7SqryY8",
-  mapEmbed:
-    "https://www.google.com/maps?q=Brandroot%20Salon%20and%20Spa%2C%20Shreeji%20The%20Status%2C%20Opposite%20City%20Centre%20Mall%2C%20Nashik%2C%20Maharashtra%20422002&output=embed",
-  hours: "10:00 AM – 8:00 PM · Open Daily",
+  name: "Aura Luxe",
+  full: "Aura Luxe Salon & Spa",
+  tagline: "Hair • Beauty • Wellness",
+  city: "City Center",
+  phone: "+91 99999 99999",
+  phoneHref: "tel:+919999999999",
+  whatsapp: "https://wa.me/919999999999?text=" + encodeURIComponent("Hello Aura Luxe, I'd like to book an appointment."),
+  instagram: "https://www.instagram.com/",
+  instagramHandle: "@auraluxesalon",
+  maps: "https://maps.google.com",
+  mapEmbed: "https://maps.google.com",
+  hours: "10:00 AM – 8:00 PM | Open Daily",
   address: [
-    "Shop No. 9/10/11, Shreeji The Status",
-    "Opposite City Centre Mall",
-    "Parijat Nagar, Nashik, Maharashtra 422002",
-  ],
+    "Plot 202, Luxury Promenade,",
+    "High Street Fashion Hub,",
+    "City Center"
+  ]
 };
+
 
 export const NAV_LINKS = [
   { label: "HOME", href: "#home" },
