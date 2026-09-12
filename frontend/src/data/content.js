@@ -18,7 +18,6 @@ export const BRAND = {
   ]
 };
 
-
 export const NAV_LINKS = [
   { label: "HOME", href: "#home" },
   { label: "SERVICES", href: "#services" },
@@ -109,7 +108,7 @@ export const SERVICES = [
   {
     id: "tattoo",
     name: "TATTOO",
-    desc: "Tattoo artistry at BRANDROOT — availability confirmed on enquiry.",
+    desc: "Tattoo artistry at Aura Luxe — availability confirmed on enquiry.",
     img: IMG.tattoo,
   },
 ];
@@ -124,9 +123,9 @@ export const FEATURED = [
 ];
 
 export const PACKAGES = [
-  { num: "01", name: "SILVER PLAN", note: "A curated BRANDROOT package. Inclusions and pricing shared on enquiry." },
-  { num: "02", name: "GOLD PLAN", note: "A curated BRANDROOT package. Inclusions and pricing shared on enquiry." },
-  { num: "03", name: "PLATINUM PLAN", note: "A curated BRANDROOT package. Inclusions and pricing shared on enquiry." },
+  { num: "01", name: "SILVER PLAN", note: "A curated luxury package. Inclusions and pricing shared on enquiry." },
+  { num: "02", name: "GOLD PLAN", note: "A curated luxury package. Inclusions and pricing shared on enquiry." },
+  { num: "03", name: "PLATINUM PLAN", note: "A curated luxury package. Inclusions and pricing shared on enquiry." },
 ];
 
 export const GALLERY = [
@@ -139,7 +138,7 @@ export const GALLERY = [
   { img: IMG.barber, label: "PRECISION", cls: "col-span-2 md:col-span-4 aspect-[16/10] md:aspect-auto" },
 ];
 
-export const MARQUEE_WORDS = ["HAIR", "SKIN", "SPA", "NAILS", "MAKEUP", "WELLNESS", "NASHIK"];
+export const MARQUEE_WORDS = ["HAIR", "SKIN", "SPA", "NAILS", "MAKEUP", "WELLNESS", "LUXURY"];
 
 export const TIME_SLOTS = [
   "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM",
