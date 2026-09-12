@@ -6,7 +6,9 @@ export const Footer = () => (
   <footer className="bg-charcoal text-ivory px-5 md:px-10 pt-20 pb-28 md:pb-10">
     <div className="grid md:grid-cols-12 gap-12">
       <div className="md:col-span-5">
-        <p className="font-serif text-4xl md:text-5xl tracking-[0.12em]">BRANDROOT</p>
+        <p className="font-serif text-4xl md:text-5xl tracking-[0.12em]">
+          {BRAND.name.toUpperCase()}
+        </p>
         <p className="font-sans text-xs tracking-[0.25em] text-ivory/50 mt-4">
           {BRAND.tagline.toUpperCase()}
         </p>
@@ -40,9 +42,11 @@ export const Footer = () => (
         >
           {BRAND.phone}
         </a>
-        <p className="font-sans text-xs text-ivory/50 mt-3 leading-relaxed">
-          Opposite City Centre Mall, Nashik
-        </p>
+        <div className="font-sans text-xs text-ivory/50 mt-3 leading-relaxed">
+          {BRAND.address.map((line, idx) => (
+            <p key={idx}>{line}</p>
+          ))}
+        </div>
         <p className="font-sans text-xs text-ivory/50 mt-1">{BRAND.hours}</p>
         <div className="flex gap-3 mt-6">
           <a
@@ -50,7 +54,7 @@ export const Footer = () => (
             href={BRAND.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="BRANDROOT on Instagram"
+            aria-label={`${BRAND.name} on Instagram`}
             className="p-3 border border-ivory/25 hover:bg-ivory hover:text-charcoal transition-colors duration-500"
           >
             <Instagram size={16} />
@@ -60,7 +64,7 @@ export const Footer = () => (
             href={BRAND.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="BRANDROOT on WhatsApp"
+            aria-label={`${BRAND.name} on WhatsApp`}
             className="p-3 border border-ivory/25 hover:bg-ivory hover:text-charcoal transition-colors duration-500"
           >
             <MessageCircle size={16} />
@@ -73,15 +77,6 @@ export const Footer = () => (
       <p className="font-sans text-[10px] tracking-[0.2em] text-ivory/40">
         © 2026 {BRAND.full} ALL RIGHTS RESERVED.
       </p>
-      <a
-        data-testid="footer-website-link"
-        href="https://brandrootsalon.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-sans text-[10px] tracking-[0.2em] text-ivory/40 hover:text-ivory transition-colors duration-300"
-      >
-        BRANDROOTSALON.COM
-      </a>
     </div>
   </footer>
 );
