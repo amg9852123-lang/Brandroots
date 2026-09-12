@@ -51,7 +51,7 @@ export const Navbar = () => {
               light ? "text-ivory" : "text-charcoal"
             } ${open ? "text-ivory" : ""}`}
           >
-            BRANDROOT
+            {BRAND.name.toUpperCase()}
           </button>
 
           <div className="hidden lg:flex items-center gap-8">
