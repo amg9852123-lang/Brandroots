@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { IMG } from "../data/content";
+import { BRAND, IMG } from "../data/content";
 import { useBooking } from "../context/BookingContext";
 import { scrollToId } from "../lib/scroll";
 import { EASE } from "./Reveal";
@@ -34,7 +34,7 @@ export const Hero = () => {
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <img
           src={IMG.hero}
-          alt="Editorial beauty portrait — BRANDROOT Salon & Spa"
+          alt={`Editorial beauty portrait — ${BRAND.full}`}
           className="w-full h-full object-cover"
           fetchpriority="high"
         />
@@ -52,7 +52,7 @@ export const Hero = () => {
           className="font-sans text-[10px] md:text-[11px] tracking-[0.35em] text-ivory/70 mb-6"
           data-testid="hero-eyebrow"
         >
-          BRANDROOT — LUXURY UNISEX SALON & SPA · NASHIK
+          {BRAND.name.toUpperCase()} — LUXURY UNISEX SALON & SPA · {BRAND.city.toUpperCase()}
         </motion.p>
 
         <h1 className="font-serif text-ivory text-[16vw] sm:text-[13vw] lg:text-[10vw] leading-[0.92] tracking-tight">
@@ -69,7 +69,7 @@ export const Hero = () => {
             transition={{ delay: 0.9, duration: 1, ease: EASE }}
             className="font-sans text-sm md:text-base text-ivory/70 max-w-xs leading-relaxed"
           >
-            A refined hair, beauty and wellness experience in Nashik.
+            A refined hair, beauty and wellness experience in {BRAND.city}.
           </motion.p>
 
           <motion.div
